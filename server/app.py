@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
+from flask import Flask, request, make_response, jsonify
+from flask_migrate import Migrate
 
+from models import db, Bakery, BakedGood
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
